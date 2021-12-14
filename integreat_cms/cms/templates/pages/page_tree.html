@@ -9,6 +9,8 @@
 
 {% block content %}
 {% with filter_form.filters_visible as filters_visible %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language LANGUAGE_CODE as backend_language %}
 <div class="table-header">
     <div class="flex flex-wrap justify-between gap-4">
         <h1 class="heading">{% trans 'Page Tree' %}</h1>

@@ -7,6 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .language import Language
 from ..regions.region import Region
+from ...constants import languages
 
 
 class LanguageTreeNode(MPTTModel):
@@ -20,6 +21,12 @@ class LanguageTreeNode(MPTTModel):
         Language,
         on_delete=models.PROTECT,
         related_name="language_tree_nodes",
+        verbose_name=_("language"),
+    )
+    language2 = models.CharField(
+        blank=True,
+        max_length=8,
+        choices=languages.CHOICES,
         verbose_name=_("language"),
     )
     parent = TreeForeignKey(
