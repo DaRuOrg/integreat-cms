@@ -9,6 +9,7 @@ import { setToggleSubpagesEventListeners } from "./toggle-subpages";
 import { addDragAndDropListeners } from "../tree-drag-and-drop";
 import { addConfirmationDialogListeners } from "../confirmation-popups";
 import { addCheckboxCountListeners } from "../checkbox-count";
+import { restorePageLayout } from "./persistent_page_tree";
 
 window.addEventListener("load", () => {
   // Load subpages initially
@@ -25,6 +26,7 @@ window.addEventListener("load", () => {
       setBulkActionEventListeners();
       addDragAndDropListeners();
       addConfirmationDialogListeners();
+      restorePageLayout();
     })
   }
 });
@@ -55,7 +57,7 @@ export async function fetchSubpages(collapseSpan: HTMLElement): Promise<number[]
   let currentRow = parentRow
   let directChildrenIds: number[] = [];
   let descendantIds: number[] = [];
-  renderedDescendants.forEach(function(rowToInsert: HTMLTableRowElement) {
+  renderedDescendants.forEach(function (rowToInsert: HTMLTableRowElement) {
     if (rowToInsert.classList.contains("page-row")) {
       // Record children ids to update all ancestors descendants data attribute
       let descendantId = parseInt(rowToInsert.dataset.dropId);
@@ -73,7 +75,7 @@ export async function fetchSubpages(collapseSpan: HTMLElement): Promise<number[]
   // Update descendants to enable drag & drop functionality
   let dragSpan = parentRow.querySelector(".drag") as HTMLElement;
   const descendants = JSON.parse(
-      dragSpan.dataset.nodeDescendants
+    dragSpan.dataset.nodeDescendants
   ) as number[];
   dragSpan.dataset.nodeDescendants = `[${descendants.concat(descendantIds)}]`;
   // Set direct children to enable expand/collapse functionality

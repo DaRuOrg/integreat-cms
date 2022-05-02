@@ -2,11 +2,14 @@
  * The functionality to toggle subpages
  */
 import feather from "feather-icons";
+import { restorePageLayout, storeExpandedState } from "./persistent_page_tree";
 
 window.addEventListener("load", () => {
   // On the page tree, the event listeners are set after all subpages have been loaded
   if (!document.querySelector("[data-delay-event-handlers]")) {
     setToggleSubpagesEventListeners();
+    feather.replace({ class: 'inline-block' });
+    restorePageLayout();
   }
 });
 
@@ -42,10 +45,17 @@ export function setToggleSubpagesEventListeners() {
  * 
  * @param event Collapse/Expand button clicked
  */
-export async function toggleSubpages(event: Event) {
+export function toggleSubpages(event: Event) {
   event.preventDefault();
-  // Get span with all data options
-  let collapseSpan = (event.target as HTMLElement).closest("span");
+  toggleSubpagesForElement((event.target as HTMLElement).closest("span"));
+}
+
+/**
+ * This function toggles all subpages of the given element and changes the icon
+ * 
+ * @param collapseSpan The page which should be toggled
+ */
+export function toggleSubpagesForElement(collapseSpan: HTMLSpanElement) {
   const children: number[] = JSON.parse(
     collapseSpan.getAttribute("data-page-children")
   );
@@ -54,11 +64,9 @@ export async function toggleSubpages(event: Event) {
   // Change icon and title
   let icon = collapseSpan.querySelector("svg");
   if (icon.classList.contains("feather-chevron-down")) {
-    collapseSpan.innerHTML = '<i data-feather="chevron-right"></i>';
-    collapseSpan.title = collapseSpan.getAttribute("data-expand-title");
+    setExpandedState(collapseSpan, false);
   } else {
-    collapseSpan.innerHTML = '<i data-feather="chevron-down"></i>';
-    collapseSpan.title = collapseSpan.getAttribute("data-collapse-title");
+    setExpandedState(collapseSpan, true);
   }
   // Trigger icon replacement
   feather.replace({ class: 'inline-block' });
@@ -113,15 +121,12 @@ async function collapseAllPages() {
     }
     // Remove the left sibling from possible drop targets
     document
-        .getElementById(page.id + "-drop-left")
-        ?.classList.remove("drop-between");
+      .getElementById(page.id + "-drop-left")
+      ?.classList.remove("drop-between");
     // Find out whether this page has children itself
     const span = page.querySelector(".toggle-subpages") as HTMLElement;
     if (span) {
-      // Change icon
-      span.innerHTML = '<i data-feather="chevron-right"></i>';
-      // Toggle title
-      span.title = span.getAttribute("data-expand-title");
+      setExpandedState(span, false);
     }
   });
   // Trigger icon replacement
@@ -137,17 +142,36 @@ async function expandAllPages() {
     page.classList.remove("hidden");
     // Add the left sibling to possible drop targets
     document
-        .getElementById(page.id + "-drop-left")
-        ?.classList.add("drop-between");
+      .getElementById(page.id + "-drop-left")
+      ?.classList.add("drop-between");
     // Find out whether this page has children itself
     const span = page.querySelector(".toggle-subpages") as HTMLElement;
     if (span) {
-      // Change icon
-      span.innerHTML = '<i data-feather="chevron-down"></i>';
-      // Toggle title
-      span.title = span.getAttribute("data-collapse-title");
+      setExpandedState(span, true);
     }
   });
   // Trigger icon replacement
   feather.replace({ class: 'inline-block' });
+}
+
+
+/**
+ * Sets the collapsed state for the given span element and 
+ * updates the icon.
+ * Updates the stored collapse state, too.
+ * 
+ * @param element The element to update
+ * @param expanded whether the element should be collapsed or expanded
+ */
+function setExpandedState(element: HTMLElement, expanded: boolean) {
+  const id: number = JSON.parse(element.getAttribute("data-page-id"))
+  if (expanded) {
+    element.innerHTML = '<i data-feather="chevron-down"></i>';
+    element.title = element.getAttribute("data-collapse-title");
+    storeExpandedState(id, true);
+  } else {
+    element.innerHTML = '<i data-feather="chevron-right"></i>';
+    element.title = element.getAttribute("data-expand-title");
+    storeExpandedState(id, false);
+  }
 }
