@@ -9,26 +9,31 @@ import { toggleSubpagesForElement } from "./toggle-subpages";
  * Rows that are not visible won't get expanded.
  */
 export function restorePageLayout() {
-    const collapsed_rows: number[] = JSON.parse(window.sessionStorage.getItem("page_state"));
+    let collapsed_rows: number[] = JSON.parse(window.sessionStorage.getItem("page_state"));
+    if (!collapsed_rows) {
+        return;
+    }
+
     const all_spans = Array.from(document.querySelectorAll(".toggle-subpages"));
 
     // Try expanding rows until no new visible rows can get expanded.
     // This approach is used because pages that are not visible should not get expanded,
     // and expanding a page can make its children visible.
-    while (collapsed_rows && collapsed_rows.length > 0) {
-        const previous_size = collapsed_rows.length;
-
-        for (let i = collapsed_rows.length - 1; i >= 0; i -= 1) {
-            const row = collapsed_rows[i];
+    while (collapsed_rows.length > 0) {
+        const still_collapsed_rows = collapsed_rows.filter((row) => {
             const span = all_spans.find((span) => JSON.parse(span.getAttribute("data-page-id")) == row);
             if (span && !span.closest("tr").classList.contains("hidden")) {
                 toggleSubpagesForElement(span as HTMLSpanElement);
-                collapsed_rows.splice(i, 1);
+                return false;
             }
-        }
-        if (collapsed_rows.length == previous_size) {
+            return true;
+        })
+
+        if (collapsed_rows.length == still_collapsed_rows.length) {
             break;
         }
+
+        collapsed_rows = still_collapsed_rows;
     }
 }
 
