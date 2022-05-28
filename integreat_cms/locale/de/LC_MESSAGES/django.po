@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-25 13:55+0000\n"
+"POT-Creation-Date: 2022-05-28 14:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Integreat <info@integreat-app.de>\n"
 "Language-Team: Integreat <info@integreat-app.de>\n"
@@ -1372,7 +1372,7 @@ msgstr "Versteckt"
 
 #: cms/constants/region_status.py:18 cms/models/pages/page.py:323
 #: cms/models/regions/region.py:621 cms/templates/events/event_form.html:76
-#: cms/templates/pages/page_form.html:102
+#: cms/templates/pages/page_form.html:100
 #: cms/templates/pages/page_tree_archived_node.html:81
 #: cms/templates/pois/poi_form.html:66
 msgid "Archived"
@@ -1679,7 +1679,7 @@ msgstr "Kategorie"
 #: cms/templates/imprint/imprint_sbs.html:115
 #: cms/templates/imprint/imprint_sbs.html:134
 #: cms/templates/linkcheck/links_by_filter.html:59
-#: cms/templates/pages/page_form.html:99
+#: cms/templates/pages/page_form.html:97
 #: cms/templates/pages/page_revisions.html:50
 #: cms/templates/pages/page_sbs.html:59 cms/templates/pages/page_sbs.html:115
 #: cms/templates/pages/page_sbs.html:121 cms/templates/pages/page_tree.html:88
@@ -3375,7 +3375,7 @@ msgstr "Angebots-Vorlagen"
 #: cms/templates/imprint/imprint_sbs.html:48
 #: cms/templates/imprint/imprint_sbs.html:112
 #: cms/templates/imprint/imprint_sbs.html:131
-#: cms/templates/pages/page_form.html:93
+#: cms/templates/pages/page_form.html:91
 #: cms/templates/pages/page_revisions.html:24
 #: cms/templates/pages/page_sbs.html:56 cms/templates/pages/page_sbs.html:112
 #: cms/templates/pages/page_sbs.html:118 cms/templates/pois/poi_form.html:58
@@ -3456,7 +3456,7 @@ msgstr "Tipp"
 
 #: cms/templates/_tinymce_config.html:37
 #: cms/templates/events/event_form.html:44
-#: cms/templates/pages/page_form.html:57 cms/templates/pois/poi_form.html:38
+#: cms/templates/pages/page_form.html:55 cms/templates/pois/poi_form.html:38
 msgid "Update"
 msgstr "Aktualisieren"
 
@@ -3921,7 +3921,7 @@ msgstr "Veranstaltung erstellen"
 #: cms/templates/events/event_form.html:40
 #: cms/templates/imprint/imprint_form.html:26
 #: cms/templates/imprint/imprint_sbs.html:24
-#: cms/templates/pages/page_form.html:51 cms/templates/pages/page_sbs.html:26
+#: cms/templates/pages/page_form.html:52 cms/templates/pages/page_sbs.html:26
 #: cms/templates/pois/poi_form.html:35
 msgid "Save as draft"
 msgstr "Als Entwurf speichern"
@@ -3929,18 +3929,18 @@ msgstr "Als Entwurf speichern"
 #: cms/templates/events/event_form.html:46
 #: cms/templates/imprint/imprint_form.html:27
 #: cms/templates/imprint/imprint_sbs.html:25
-#: cms/templates/pages/page_form.html:59 cms/templates/pages/page_sbs.html:30
+#: cms/templates/pages/page_form.html:57 cms/templates/pages/page_sbs.html:30
 #: cms/templates/pois/poi_form.html:40
 msgid "Publish"
 msgstr "Veröffentlichen"
 
 #: cms/templates/events/event_form.html:50
-#: cms/templates/pages/page_form.html:63 cms/templates/pages/page_sbs.html:32
+#: cms/templates/pages/page_form.html:61 cms/templates/pages/page_sbs.html:32
 msgid "Submit for review"
 msgstr "Zur Überprüfung vorlegen"
 
 #: cms/templates/events/event_form.html:92
-#: cms/templates/pages/page_form.html:137 cms/templates/pois/poi_form.html:80
+#: cms/templates/pages/page_form.html:135 cms/templates/pois/poi_form.html:80
 msgid "Edit"
 msgstr "Bearbeiten"
 
@@ -3949,15 +3949,15 @@ msgstr "Bearbeiten"
 #: cms/templates/imprint/imprint_form.html:78
 #: cms/templates/imprint/imprint_sbs.html:61
 #: cms/templates/imprint/imprint_sbs.html:125
-#: cms/templates/pages/page_form.html:122
-#: cms/templates/pages/page_form.html:141
-#: cms/templates/pages/page_form.html:228 cms/templates/pois/poi_form.html:84
+#: cms/templates/pages/page_form.html:120
+#: cms/templates/pages/page_form.html:139
+#: cms/templates/pages/page_form.html:226 cms/templates/pois/poi_form.html:84
 msgid "Copy to clipboard"
 msgstr "In die Zwischenablage kopieren"
 
 #: cms/templates/events/event_form.html:122
 #: cms/templates/imprint/imprint_form.html:94
-#: cms/templates/pages/page_form.html:167
+#: cms/templates/pages/page_form.html:165
 #: cms/templates/pages/page_revisions.html:58
 #: cms/templates/pois/poi_form.html:114
 msgid "Minor edit"
@@ -3966,7 +3966,7 @@ msgstr "Geringfügige Änderung"
 #: cms/templates/events/event_form.html:126
 #: cms/templates/imprint/imprint_form.html:98
 #: cms/templates/imprint/imprint_sbs.html:145
-#: cms/templates/pages/page_form.html:171 cms/templates/pages/page_sbs.html:134
+#: cms/templates/pages/page_form.html:169 cms/templates/pages/page_sbs.html:134
 #: cms/templates/pois/poi_form.html:118
 msgid "Implications on other translations"
 msgstr "Auswirkungen auf andere Übersetzungen"
@@ -4005,7 +4005,7 @@ msgstr "Auf Google Maps öffnen"
 
 #: cms/templates/events/event_form.html:328
 #: cms/templates/imprint/imprint_form.html:112
-#: cms/templates/pages/page_form.html:277 cms/templates/pois/poi_form.html:213
+#: cms/templates/pages/page_form.html:275 cms/templates/pois/poi_form.html:213
 #: cms/templates/regions/region_list.html:25
 #: cms/templates/settings/user_settings.html:93
 msgid "Actions"
@@ -4308,7 +4308,7 @@ msgid "No feedback available yet."
 msgstr "Noch kein Feedback vorhanden."
 
 #: cms/templates/generic_confirmation_dialog.html:12
-#: cms/templates/pages/page_form.html:76
+#: cms/templates/pages/page_form.html:74
 msgid "Warning"
 msgstr "Warnung"
 
@@ -4358,12 +4358,12 @@ msgid "Create imprint"
 msgstr "Impressum erstellen"
 
 #: cms/templates/imprint/imprint_form.html:47
-#: cms/templates/pages/page_form.html:97
+#: cms/templates/pages/page_form.html:95
 msgid "Show"
 msgstr "Anzeigen"
 
 #: cms/templates/imprint/imprint_form.html:57
-#: cms/templates/pages/page_form.html:115
+#: cms/templates/pages/page_form.html:113
 msgid "Short URL"
 msgstr "Kurz-URL"
 
@@ -4396,7 +4396,7 @@ msgid "Side-by-Side view"
 msgstr "Side-by-Side-Ansicht"
 
 #: cms/templates/imprint/imprint_form.html:137
-#: cms/templates/pages/page_form.html:416
+#: cms/templates/pages/page_form.html:414
 msgid "Direction of translation"
 msgstr "Übersetzungsrichtung"
 
@@ -4454,12 +4454,12 @@ msgid "Content"
 msgstr "Inhalt"
 
 #: cms/templates/imprint/imprint_revisions.html:78
-#: cms/templates/pages/page_revisions.html:88
+#: cms/templates/pages/page_revisions.html:89
 msgid "Restore this version as draft"
 msgstr "Diese Version als Entwurf wiederherstellen"
 
 #: cms/templates/imprint/imprint_revisions.html:79
-#: cms/templates/pages/page_revisions.html:91
+#: cms/templates/pages/page_revisions.html:90
 msgid "Restore and publish this version"
 msgstr "Diese Version wiederherstellen und veröffentlichen"
 
@@ -4893,44 +4893,44 @@ msgstr "Neue Übersetzung erstellen"
 msgid "Create new page"
 msgstr "Neue Seite erstellen"
 
-#: cms/templates/pages/page_form.html:77
+#: cms/templates/pages/page_form.html:75
 msgid "Translation in progress"
 msgstr "Übersetzung wird durchgeführt"
 
-#: cms/templates/pages/page_form.html:82
+#: cms/templates/pages/page_form.html:80
 msgid "Cancel translation process"
 msgstr "Übersetzungsprozess abbrechen"
 
-#: cms/templates/pages/page_form.html:104
+#: cms/templates/pages/page_form.html:102
 #: cms/templates/pages/page_tree_archived_node.html:85
 msgid "Archived, because a parent page is archived"
 msgstr "Archiviert, weil eine übergeordnete Seite archiviert ist"
 
-#: cms/templates/pages/page_form.html:185
+#: cms/templates/pages/page_form.html:183
 msgid "Settings of the page"
 msgstr "Einstellungen der Seite"
 
-#: cms/templates/pages/page_form.html:194
+#: cms/templates/pages/page_form.html:192
 msgid "Positioning"
 msgstr "Anordnung"
 
-#: cms/templates/pages/page_form.html:199
+#: cms/templates/pages/page_form.html:197
 msgid "Order"
 msgstr "Reihenfolge"
 
-#: cms/templates/pages/page_form.html:203
+#: cms/templates/pages/page_form.html:201
 msgid "Embed live content"
 msgstr "Live-Inhalte einbinden"
 
-#: cms/templates/pages/page_form.html:233
+#: cms/templates/pages/page_form.html:231
 msgid "Access token was successfully copied to clipboard"
 msgstr "Zugangs-Token wurde erfolgreich in die Zwischenablage kopiert."
 
-#: cms/templates/pages/page_form.html:246
+#: cms/templates/pages/page_form.html:244
 msgid "Additional permissions for this page"
 msgstr "Zusätzliche Berechtigungen für diese Seite"
 
-#: cms/templates/pages/page_form.html:248
+#: cms/templates/pages/page_form.html:246
 msgid ""
 "This affects only users, who don't have the permission to change arbitrary "
 "pages anyway."
@@ -4938,18 +4938,18 @@ msgstr ""
 "Dies betrifft nur Benutzer, die nicht ohnehin die Berechtigung haben, "
 "beliebige Seiten zu ändern."
 
+#: cms/templates/pages/page_form.html:281
 #: cms/templates/pages/page_form.html:283
-#: cms/templates/pages/page_form.html:285
-#: cms/templates/pages/page_form.html:295
+#: cms/templates/pages/page_form.html:293
 #: cms/templates/pages/page_tree_archived_node.html:113
 msgid "Restore page"
 msgstr "Seite wiederherstellen"
 
-#: cms/templates/pages/page_form.html:291
+#: cms/templates/pages/page_form.html:289
 msgid "Restore this page"
 msgstr "Diese Seite wiederherstellen"
 
-#: cms/templates/pages/page_form.html:300
+#: cms/templates/pages/page_form.html:298
 msgid "To restore this page, you have to restore its parent page:"
 msgid_plural ""
 "To restore this page, you have to restore all its archived parent pages:"
@@ -4960,31 +4960,31 @@ msgstr[1] ""
 "Um diese Seite wiederherzustellen, müssen Sie alle ihre archivierten "
 "übergeordneten Seiten wiederherstellen:"
 
+#: cms/templates/pages/page_form.html:313
 #: cms/templates/pages/page_form.html:315
-#: cms/templates/pages/page_form.html:317
 #: cms/templates/pages/page_tree_node.html:141
 msgid "Archive page"
 msgstr "Seite archivieren"
 
-#: cms/templates/pages/page_form.html:324
+#: cms/templates/pages/page_form.html:322
 msgid "Archive this page"
 msgstr "Diese Seite archivieren"
 
-#: cms/templates/pages/page_form.html:329
-#: cms/templates/pages/page_form.html:393
+#: cms/templates/pages/page_form.html:327
+#: cms/templates/pages/page_form.html:391
 #: cms/templates/pages/page_tree_archived_node.html:135
 #: cms/templates/pages/page_tree_node.html:158
 msgid "Delete page"
 msgstr "Seite löschen"
 
-#: cms/templates/pages/page_form.html:336
+#: cms/templates/pages/page_form.html:334
 #: cms/templates/pages/page_tree_archived_node.html:127
 #: cms/templates/pages/page_tree_node.html:150
 #: cms/views/pages/page_actions.py:250
 msgid "You cannot delete a page which has subpages."
 msgstr "Sie können keine Seite löschen, die Unterseiten besitzt."
 
-#: cms/templates/pages/page_form.html:338
+#: cms/templates/pages/page_form.html:336
 msgid "To delete this page, you have to delete or move its subpage first:"
 msgid_plural ""
 "To delete this page, you have to delete or move its subpages first:"
@@ -4995,7 +4995,7 @@ msgstr[1] ""
 "Um diese Seite zu löschen, müssen Sie zuerst ihre Unterseiten löschen oder "
 "verschieben:"
 
-#: cms/templates/pages/page_form.html:357
+#: cms/templates/pages/page_form.html:355
 #: cms/templates/pages/page_tree_archived_node.html:131
 #: cms/templates/pages/page_tree_node.html:154
 #: cms/views/pages/page_actions.py:255
@@ -5006,7 +5006,7 @@ msgstr ""
 "Diese Seite kann nicht gelöscht werden, da sie von einer anderen Seite als "
 "Live-Inhalt eingebunden wurde."
 
-#: cms/templates/pages/page_form.html:361
+#: cms/templates/pages/page_form.html:359
 msgid ""
 "To delete this page, you have to remove the embedded live content from this "
 "page first:"
@@ -5020,15 +5020,15 @@ msgstr[1] ""
 "Um diese Seite zu löschen, müssen Sie den eingebetteten Live-Inhalt von "
 "dieser Seiten entfernen:"
 
-#: cms/templates/pages/page_form.html:400
+#: cms/templates/pages/page_form.html:398
 msgid "Delete this page"
 msgstr "Diese Seite löschen"
 
-#: cms/templates/pages/page_form.html:411
+#: cms/templates/pages/page_form.html:409
 msgid "Translator view"
 msgstr "Übersetzeransicht"
 
-#: cms/templates/pages/page_form.html:431
+#: cms/templates/pages/page_form.html:429
 msgid "Show translator view"
 msgstr "Übersetzeransicht anzeigen"
 
@@ -5042,7 +5042,7 @@ msgstr "Versionen der Seite \"%(page_title)s\""
 msgid "Go Back to Page Editor"
 msgstr "Zurück zum Seiten-Editor"
 
-#: cms/templates/pages/page_revisions.html:93
+#: cms/templates/pages/page_revisions.html:92
 msgid "Restore this version and submit for review"
 msgstr "Diese Revision wiederherstellen und zum Review vorlegen"
 
