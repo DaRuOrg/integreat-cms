@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-18 12:16+0000\n"
+"POT-Creation-Date: 2022-08-14 12:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Integreat <info@integreat-app.de>\n"
 "Language-Team: Integreat <info@integreat-app.de>\n"
@@ -4200,7 +4200,7 @@ msgstr "Diese Sprache wird von DeepL nicht unterstützt"
 #: cms/templates/feedback/region_feedback_list.html:137
 #: cms/templates/linkcheck/links_by_filter.html:116
 #: cms/templates/pages/page_tree.html:184
-#: cms/templates/pages/page_tree_archived.html:98
+#: cms/templates/pages/page_tree_archived.html:101
 #: cms/templates/pois/poi_list.html:123
 #: cms/templates/pois/poi_list_archived.html:61
 msgid "Execute"
@@ -5219,6 +5219,10 @@ msgstr "Noch keine Seiten archiviert."
 msgid "Restore pages"
 msgstr "Seiten wiederherstellen"
 
+#: cms/templates/pages/page_tree_archived.html:98
+msgid "Delete archived pages"
+msgstr "Archivierte Seiten löschen"
+
 #: cms/templates/pages/page_tree_archived_node.html:12
 msgid "Drag & drop is disabled for archived pages."
 msgstr "Drag & drop ist für archivierte Seiten nicht möglich."
@@ -6132,7 +6136,7 @@ msgstr ""
 msgid "The selected {} were successfully archived"
 msgstr "Die ausgewählten {} wurden erfolgreich archiviert"
 
-#: cms/views/bulk_action_views.py:216
+#: cms/views/bulk_action_views.py:216 cms/views/bulk_action_views.py:254
 msgid "The selected {} were successfully restored"
 msgstr "Die ausgewählten {} wurden erfolgreich wiederhergestellt"
 

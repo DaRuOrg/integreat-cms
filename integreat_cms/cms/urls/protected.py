@@ -747,6 +747,13 @@ urlpatterns = [
                                             name="bulk_restore_pages",
                                         ),
                                         path(
+                                            "delete/",
+                                            delete_views.CustomDeleteView.as_view(
+                                                model=Page,
+                                            ),
+                                            name="bulk_delete_archived_pages",
+                                        ),
+                                        path(
                                             "<int:page_id>/",
                                             include(
                                                 [

@@ -199,6 +199,11 @@ VIEWS = [
                 {"selected_ids[]": [1, 2, 3]},
             ),
             (
+                "bulk_delete_archived_pages",
+                PRIV_STAFF_ROLES + [MANAGEMENT, EDITOR, AUTHOR],
+                {"selected_ids[]": [1, 2, 3]},
+            ),
+            (
                 "bulk_archive_events",
                 PRIV_STAFF_ROLES + REGION_ROLES,
                 {"selected_ids[]": [1]},

@@ -219,3 +219,41 @@ class BulkRestoreView(BulkActionView):
         )
         # Let the base view handle the redirect
         return super().post(request, *args, **kwargs)
+
+
+class BulkDeleteArchivedView(BulkActionView):
+    """
+    Bulk action for restoring multiple objects at once
+    """
+
+    def post(self, request, *args, **kwargs):
+
+        r"""
+        Restore the selected objects and redirect
+
+        :param request: The current request
+        :type request: ~django.http.HttpResponse
+
+        :param \*args: The supplied arguments
+        :type \*args: list
+
+        :param \**kwargs: The supplied keyword arguments
+        :type \**kwargs: dict
+
+        :return: The redirect
+        :rtype: ~django.http.HttpResponseRedirect
+        """
+        # Restore objects
+        # self.get_queryset().update(**{self.archived_field: False})
+        # Invalidate cache
+        invalidate_model(self.model)
+        print("Deleted Pagee!")
+        logger.debug("%r deleted by %r", self.get_queryset(), request.user)
+        messages.success(
+            request,
+            _("The selected {} were successfully deleted").format(
+                self.model._meta.verbose_name_plural
+            ),
+        )
+        # Let the base view handle the redirect
+        return super().post(request, *args, **kwargs)
